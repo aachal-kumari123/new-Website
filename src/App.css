@@ -1,0 +1,57 @@
+hr{
+  /* margin-top: 74px; */
+  margin: 30px 110px 0px 110px;
+ 
+}
+.slider2-main-app{
+  display: flex;
+  gap: 30px;
+  margin-left: 80px;
+}
+.slider2-main-app-content h2{
+margin-left: 100px;
+margin-top: 40px;
+}
+
+
+.sliders2-heading h2{
+  margin-top: 40px;
+  margin-left: 130px;
+}
+.restaurant-information{
+  display: flex;
+  gap:10px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.restaurant-information div{
+  height:30px;
+  width:100px;
+  border:1px solid gray;
+  border-radius: 30px;
+
+
+  /* color: */
+ }
+ .restaurant-information div p{
+  margin-top: 5px;
+  margin-left: 5px;
+ }
+ .places-container hr{
+  margin-top: 100px;
+ }
+ .places-container h2{
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-bottom: 30px;
+ }
+ .places-container-section{
+  display: flex;
+  /* border: 2px solid black; */
+  width:80%;
+  height: 120px;
+  margin-left: 150px;
+  /* margin-top: 30px; */
+  gap: 40px;
+ }
+

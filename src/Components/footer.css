@@ -1,0 +1,126 @@
+.footer-main-container{
+    height:650px;
+    background-color: rgb(234, 234, 236);
+    /* display: flex; */
+}
+.footer1{
+    /* border: 2px solid black; */
+    height: 450px;
+    width:500px;
+}
+.footer2{
+    /* border: 2px solid black; */
+    height: 450px;
+    width:200px;
+}
+.footer2 p{
+    color: rgb(121, 117, 117);
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.footer2 h4{
+    margin-left: 50px;
+    margin-top: 20px; 
+}
+.footer3{
+    /* border: 2px solid black; */
+    height: 450px;
+    width:200px;
+}
+.footer3 p{
+    color: rgb(121, 117, 117);
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.footer3 h4{
+    margin-left: 50px;
+    margin-top: 20px; 
+}
+.footer3-second{
+    margin-top: 90px;
+}
+.footer4{
+    /* border: 2px solid black; */
+    height: 450px;
+    width:200px;
+}
+.footer4 p{
+    color: rgb(121, 117, 117);
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.footer4 h4{
+    margin-left: 50px;
+    margin-top: 20px; 
+}
+.footer4 select{
+    height:30px;
+    width:130px;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 30px;
+    color:gray;
+    border: 1px solid gray;
+}
+.footer5{
+    /* border: 2px solid black; */
+    height: 450px;
+    width:200px;
+}
+.footer5 p{
+    color: rgb(121, 117, 117);
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.footer5 h4{
+    margin-left: 50px;
+    margin-top: 20px; 
+}
+.footer-main-1{
+    display: flex;
+}
+.footer-main-1 h3{
+    margin-top: 40px;
+    font-weight: bolder;
+    color: gray;
+    font-size: 25px;
+    margin-left: 160px;
+    gap:20px;
+}
+.footer-main-1 img{
+    height:60px;
+    width: 190px;
+    margin-top: 30px;
+}
+.footer-main-2{
+    display: flex;
+    margin-top: 60px;
+}
+.footer1-small{
+    display: flex;
+    margin-left: 50px;
+}
+.footer1-small p{
+    margin-top: 100px;
+    margin-left: 90px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(255, 82, 0);
+    width: 100px;
+    /* border: 2px solid black; */
+}
+.footer1-small div{
+    /* width: 100px; */
+    /* border: 2px solid black; */
+    width: 80px;
+}
+.footer1-small img{
+    margin-top: 90px;
+    margin-left: 100px;
+   
+}
+.footer1 h3{
+    margin-left: 150px;
+    margin-top: 20px;
+    color: gray;
+}
