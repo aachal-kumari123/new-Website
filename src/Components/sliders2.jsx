@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Components/sliders2.css";
+import { useNavigate } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -48,6 +49,7 @@ function SamplePrevArrow(props) {
 }
 
 function SwipeToSlide() {
+  var navigate = useNavigate()
 //   const settings = {
 //     className: "center",
 //     infinite: true,
@@ -136,7 +138,7 @@ function SwipeToSlide() {
   return (
     <div className="sliders2-container">
       <Slider {...settings}>
-        <div className="sliders2-content">
+        <div className="sliders2-content" onClick={()=>navigate("/secondscreen")}>
           <div>
             <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/615950282510979d66ee2399b320770f" />
           </div>

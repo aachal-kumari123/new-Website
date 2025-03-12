@@ -6,6 +6,7 @@
     height:250px;
     width:60px;
     gap:100px;
+    cursor: pointer;
  
 }
 .sliders2-content img{
