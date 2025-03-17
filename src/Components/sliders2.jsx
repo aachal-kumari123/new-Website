@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Components/sliders2.css";
+// import { useNavigate } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -48,53 +49,8 @@ function SamplePrevArrow(props) {
 }
 
 function SwipeToSlide() {
-//   const settings = {
-//     className: "center",
-//     infinite: true,
-//     centerPadding: "60px",
-//     slidesToShow: 4,
-//     swipeToSlide: true,
-//     nextArrow: <SampleNextArrow />, // Next arrow added
-//     prevArrow: <SamplePrevArrow />, // Prev arrow added
 
-
-
-
-//     responsive: [
-//       {
-//         breakpoint: 1024, // For medium-sized screens (tablets)
-//         settings: {
-//           slidesToShow: 3,
-//           centerPadding: "40px",
-//         },
-//       },
-//       {
-//         breakpoint: 768, // For small-sized screens (mobile landscape)
-//         settings: {
-//           slidesToShow: 2,
-//           centerPadding: "20px",
-//         },
-//       },
-//       {
-//         breakpoint: 480, // For very small screens (mobile portrait)
-//         settings: {
-//           slidesToShow: 1,
-//           centerPadding: "10px",
-//         },
-//       },
-//     ],
-
-//     afterChange: function (index) {
-      
-//     },
-//   };
-
-
-
-
-
-
-
+  // var navigate = useNavigate()
   // setting
   const settings = {
     className: "center",
