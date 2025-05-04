@@ -1,15 +1,15 @@
 .footer-main-container{
     height:650px;
     background-color: rgb(234, 234, 236);
-    /* display: flex; */
+    
 }
 .footer1{
-    /* border: 2px solid black; */
+    
     height: 450px;
     width:500px;
 }
 .footer2{
-    /* border: 2px solid black; */
+    
     height: 450px;
     width:200px;
 }
@@ -23,7 +23,7 @@
     margin-top: 20px; 
 }
 .footer3{
-    /* border: 2px solid black; */
+    
     height: 450px;
     width:200px;
 }
@@ -40,7 +40,7 @@
     margin-top: 90px;
 }
 .footer4{
-    /* border: 2px solid black; */
+    
     height: 450px;
     width:200px;
 }
@@ -63,7 +63,7 @@
     border: 1px solid gray;
 }
 .footer5{
-    /* border: 2px solid black; */
+
     height: 450px;
     width:200px;
 }
@@ -107,11 +107,10 @@
     font-weight: bolder;
     color: rgb(255, 82, 0);
     width: 100px;
-    /* border: 2px solid black; */
+    
 }
 .footer1-small div{
-    /* width: 100px; */
-    /* border: 2px solid black; */
+    
     width: 80px;
 }
 .footer1-small img{
@@ -124,3 +123,89 @@
     margin-top: 20px;
     color: gray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .footer-main-2 {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .footer1, .footer2, .footer3, .footer4, .footer5 {
+      width: 45%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-main-container {
+      height: auto;
+      padding-bottom: 40px;
+    }
+  
+    .footer-main-1 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-main-1 h3 {
+      margin-left: 0;
+      font-size: 20px;
+      padding: 0 20px;
+    }
+  
+    .footer-main-1 img {
+      margin-top: 10px;
+      width: 150px;
+      height: auto;
+    }
+  
+    .footer-main-2 {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+  
+    .footer1, .footer2, .footer3, .footer4, .footer5 {
+      width: 90%;
+      margin-bottom: 40px;
+    }
+  
+    .footer1-small {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer1-small img {
+      margin-left: 0;
+    }
+  
+    .footer1-small p {
+      margin-left: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .footer2 h4, .footer3 h4, .footer4 h4, .footer5 h4,
+    .footer2 p, .footer3 p, .footer4 p, .footer5 p {
+      margin-left: 20px;
+    }
+  
+    .footer4 select {
+      margin-left: 20px;
+    }
+  }
+  
