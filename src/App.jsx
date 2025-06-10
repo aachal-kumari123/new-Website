@@ -9,7 +9,11 @@ import ProductPage from './Screen/ProductPage';
 import CartPage from './Screen/CartPage';
 import HelpPage from './Screen/helpPage'
 import DetailsPage from './Screen/productDetailsPage.jsx'
-// import  {BrowserRouter as Router , Routes , Route}  from "react-router-dom";
+import Firstspage from './PropsDriling/first.jsx'
+import Aboutus from  './Screen/Aboutus.jsx'
+import SignIn from './Screen/SignIn';
+import toast, { Toaster } from 'react-hot-toast';
+
 function App() {
 return (
   
@@ -24,8 +28,12 @@ return (
         <Route path='/cartpage'  element={<CartPage/>}/>
         <Route path='/helpPage'  element={<HelpPage/>}/>
         <Route path='/detailspage' element={<DetailsPage/>}/>
+        <Route path='/firstspage' element={<Firstspage/>}/>
+         <Route path='/aboutus' element={<Aboutus/>}/>
+            <Route path='/signin' element={<SignIn />} />
       </Routes>
     </Router>
+     <Toaster />
   </>
 
 )

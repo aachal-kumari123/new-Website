@@ -54,5 +54,15 @@ hr{
     /* margin-top: 30px; */
     gap: 40px;
    }
+
+   @media (max-width: 768px) {
+    .sliders2-heading {
+     margin-left:- 20px;
+     font-size: 0.6rem;
+     /* border:2px solid black; */
+     margin-right: 20px;
+     
+    }
+  }
   
   

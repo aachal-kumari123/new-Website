@@ -1,14 +1,13 @@
 .slider-container {
-    /* background-color: transparent rgb(202, 94, 94); */
+    
     background: linear-gradient(to bottom, rgb(167, 166, 166) -1000%, rgb(249, 252, 252) 90%);
     height: 270px;
     width: 95%; 
-/* margin: 40px; */
+
 margin: 0px 20px 0px 20px;
     padding: 0 20px; 
     box-sizing: border-box;
     position: relative;
-    /* border: 2px solid red; */
   }
   
   .small-container img {
@@ -19,13 +18,13 @@ margin: 0px 20px 0px 20px;
   }
   
   .small-container {
-    /* border: 2px solid black; */
+    
     margin-right: 140px;
     width: 50%; 
     height: 200px;
     margin-top: 50px;
     padding: 0 10px;
-    /* background-color: white; */
+  
     background: linear-gradient(to bottom, rgb(167, 166, 166) -1000%, rgb(249, 252, 252) 90%);
   }
   
@@ -41,12 +40,12 @@ margin: 0px 20px 0px 20px;
     width: 100%;
   }
   
-  @media (max-width: 768px) {
+   /* @media (max-width: 768px) {
     .slider-container {
       height: 250px; 
       padding: 0 10px; 
       width: 60%;
-      /* border: 2px solid black; */
+    
     }
   
     .slider-container img {
@@ -66,29 +65,60 @@ margin: 0px 20px 0px 20px;
       top: 10px; 
       margin-left:50px;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .slider-container {
-      height: 200px;
-      padding: 0 5px;
-      width:90%;
-    }
-  
+  } 
+    */
+ 
+
+
+ @media (max-width: 1024px) {
     .slider-container h2 {
-      font-size: 1rem; 
-      top: 5px; 
+      font-size: 1.5rem;
+      margin-left: 80px;
+     
     }
   
     .small-container {
-      width: 90%; 
-      padding: 0 2px;
+      height: 180px;
     }
   
-    .slider-container img {
-        width: 40%;
-      height: 190px; 
-      object-fit: cover; 
+    .small-container img {
+      width:150px;
+   
+
     }
   }
+  
+  @media (max-width: 768px) {
+    .slider-container {
+      padding: 30px 10px;
+     
+    }
+  
+    .slider-container h2 {
+      font-size: 1.3rem;
+    }
+  
+    .small-container {
+      height: 160px;
+    }
+  
+    .small-container img {
+      height: 130px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider-container h2 {
+      font-size: 1.1rem;
+    }
+  
+    .small-container {
+      height: 140px;
+      padding: 5px;
+    }
+  
+    .small-container img {
+      height: 110px;
+    }
+  } 
   

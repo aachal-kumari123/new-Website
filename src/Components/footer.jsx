@@ -11,8 +11,8 @@ export default function FooterSection(){
 
            <div className='footer1'>
                 <div className='footer1-small'>
-                   <div><img src="https://media.ipoji.com/ipo/images/swiggy-logo.png"/></div>
-                     <div><p>Swiggys</p></div>
+                   <div><img src="../public/zaika.jpeg"/></div>
+                     <div><p> Z𝕒Ⓘ𝕂𝕒 Gн𝕒Ｒ </p></div>
                 </div>
                 <div><h3>© 2025 Swiggy Limited</h3></div>
             </div> 

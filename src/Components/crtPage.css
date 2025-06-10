@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 220px;
 }
 .cart-img-box img{
     height:257px;
@@ -30,4 +31,7 @@ border: none;
 font-size: 20px;
 margin-top: 20px;
 margin-left: 50px;
+}
+hr{
+    width:"90%";
 }

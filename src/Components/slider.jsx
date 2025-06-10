@@ -105,6 +105,7 @@ function CarousalComponent() {
 
   const handleClick = (categoryId) => {
     navigate("/product",{state:{categoryId:categoryId}})
+    console.log("hh")
   }
 
   return (

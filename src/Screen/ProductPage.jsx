@@ -5,9 +5,12 @@ import { useLocation } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import FooterSection from "../Components/footer.jsx";
 import "../Components/productpage.css";
+import { useDispatch } from "react-redux";
+
 export default function ProductPage() {
     const location = useLocation()
     const categoryId = location.state.categoryId    //2
+     const dispatch = useDispatch()
     // console.log("what is in location:",location)
     // console.log("Category Id:",categoryId)
     const [searchitem,setSearchItem]=useState()
@@ -20,7 +23,7 @@ export default function ProductPage() {
         { productId: 25, productname: "Noodles & Rice", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Noodles & Rice description", price: 300, categoryId: 3 },
         { productId: 26, productname: "Noodles & Rice", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Noodles & Rice description", price: 400, categoryId: 3 },
         { productId: 27, productname: "Chicken Biryani", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Biriyani description", price: 300, categoryId: 4 },
-        { productId: 28, productname: "Hyderabadi Dum Biryani", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Hyderabadi Dum Biryani description", price: 400, categoryId: 4 },
+        { productId: 28, productname: "Hyderabadi  Biryani", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Hyderabadi Biryani", price: 400, categoryId: 4 },
         { productId: 29, productname: "Veg Biryani", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Veg Biryani description", price: 300, categoryId: 4 },
         { productId: 30, productname: "Paneer Biryani", imageUrl: "https://png.pngtree.com/png-vector/20240828/ourmid/pngtree-white-cooked-rice-isolated-png-image_13655088.png", rating: 6, description: "Paneer Biryani description", price: 400, categoryId: 4 },
     
@@ -44,42 +47,35 @@ export default function ProductPage() {
         const d = filter.filter((item)=>item.productname.toLowerCase().includes(element.target.value.toLowerCase()))    // india     in    indigo
         setSearchItem(d)
         }
+
+         const AddToCart =(item)=>{
+      console.log("ADD TO CART ITEM:",item)
+      dispatch({"type":"ADD_PRODUCT",payload:[item.productId,{...item,"quantity":1}]}) // spread operator
+    }
+    
         
     
     return (<div>
         <Navbar  defaultSearch={false}/>
         
-        <div className="search-container">
+        <div className="search-container" style={{border:"2px solid black",height:"50px"}}>
        <input type="text" placeholder="Search..." onChange={(element)=>searchfn(element)}/>
        <IoSearch />
       </div>
 
-        {/* <div className="parent-of-main-container-product">
-            {filter.map((item) => (
-                <div className="main-container-product">
-                    <div className="img-div"><img src={item.imageUrl} /></div>
-                    <hr></hr>
-                    <h3 className="product-name">{item.productname}</h3>
-                    <p className="product-description">{item.description}</p>
-                    <div className="main-div-of-add-to-cart">
-                        {item.offerprice ? <div className="product-price">&#8377;<s>{item.price}</s> {item.offerprice}</div> : <div className="product-price">&#8377;{item.price}</div>}
-                        <div className="add-to-cart">Add To Cart</div>
-                    </div>
-                </div>
-            ))}
-        </div> */}
-          <div className="parent-of-main-container-product">
+       
+          <div className="parent-of-main-container-product" >
             {searchitem?.length>0?searchitem.map((item) => (
-                <div className="main-container-product" key={item.productId}>
-                    <div className="img-div"><img src={item.imageUrl} /></div>
-                    <hr></hr>
-                    <h3 className="product-name">{item.productname}</h3>
+                 <div className="main-container-product" key={item.productId}>
+                     <div className="img-div"><img src={item.imageUrl} /></div>
+                     <hr></hr>
+                     <h3 className="product-name">{item.productname}</h3>
                     <p className="product-description">{item.description}</p>
                     <div className="main-div-of-add-to-cart">
-                        {item.offerprice ? <div className="product-price">&#8377;<s>{item.price}</s> {item.offerprice}</div> : <div className="product-price">&#8377;{item.price}</div>}
-                        <div className="add-to-cart">Add To Cart</div>
-                    </div>
-                </div>
+                         {item.offerprice ? <div className="product-price">&#8377;<s>{item.price}</s> {item.offerprice}</div> : <div className="product-price">&#8377;{item.price}</div>}
+                         <div className="add-to-cart">Add To Cart</div>
+                     </div>
+                 </div>
             )):
             filter.map((item) => (
                 <div className="main-container-product" key={item.productId}>
@@ -89,12 +85,14 @@ export default function ProductPage() {
                     <p className="product-description">{item.description}</p>
                     <div className="main-div-of-add-to-cart">
                         {item.offerprice ? <div className="product-price">&#8377;<s>{item.price}</s> {item.offerprice}</div> : <div className="product-price">&#8377;{item.price}</div>}
-                        <div className="add-to-cart">Add To Cart</div>
+                        <div className="add-to-cart" onClick={()=>AddToCart(item)}>Add To Cart</div>
                     </div>
                 </div>
             ))
         }
         </div>
+        <div style={{marginTop:"100px"}}>
         <FooterSection/>
+        </div>
     </div>)
 }

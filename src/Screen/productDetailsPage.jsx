@@ -124,7 +124,7 @@ export default function detailsPage() {
                    </div>
 
                    <div style={{width:"50%",height:"150px",margin:"30px",display:"flex",gap:"10px"}}>
-                    <div class="outer-circle">
+                    <div className="outer-circle">
                    <div class="inner-circle"><p style={{margin:"15px"}}>4.6</p></div>
                    </div>
                    <div class="outer-circle">
